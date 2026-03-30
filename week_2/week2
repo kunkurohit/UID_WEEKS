@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-image:url('amrita-campus.jpg'); background-size:cover; background-repeat:no-repeat;">
+
+<!-- Logo Section -->
+
+<div style="text-align:center;">
+<img src="amrita-logo.png" width="120" height="120">
+</div>
+
+<hr>
+
+<h1 style="color:darkblue; font-family:verdana; text-align:center;">
+Amrita Vishwa Vidyapeetham
+</h1>
+
+<h3 style="text-align:center; color:maroon;">
+Multi-Campus Research University
+</h3>
+
+<hr>
+
+<!-- Introduction -->
+
+<p style="text-align:center; font-style:italic; color:black;">
+Amrita Vishwa Vidyapeetham is a leading multidisciplinary research university in India.
+It was founded by <b>Mata Amritanandamayi Devi (Amma)</b> and is headquartered in
+Coimbatore, Tamil Nadu. The university is accredited with an <b>'A++'</b> grade by NAAC
+and is recognized by the University Grants Commission (UGC).
+</p>
+
+<p style="text-align:center;">
+<b>Founder:</b> Mata Amritanandamayi Devi <br>
+<b>Established:</b> 2003 <br>
+<b>Headquarters:</b> Coimbatore, Tamil Nadu, India
+</p>
+
+<hr>
+
+<h2 style="text-align:center; color:darkgreen;">
+Major Campuses of Amrita Vishwa Vidyapeetham
+</h2>
+
+<!-- Campus Table -->
+
+<table border="1" width="70%" cellpadding="12" cellspacing="5" style="margin:auto; text-align:center; background-color:white;">
+
+<tr style="background-color:lightblue;">
+<th>S.No</th>
+<th>Campus</th>
+<th>Location</th>
+<th>Main Programs</th>
+<th>Contact</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Amritapuri Campus</td>
+<td>Kollam, Kerala</td>
+<td>Engineering, Computing, Research</td>
+<td>+91 476 2801280</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Coimbatore Campus</td>
+<td>Ettimadai, Tamil Nadu</td>
+<td>Engineering, Management, Arts & Science</td>
+<td>+91 422 2685000</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Bengaluru Campus</td>
+<td>Kasavanahalli, Karnataka</td>
+<td>Engineering, AI, Computer Science</td>
+<td>+91 80 25183700</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Chennai Campus</td>
+<td>Vengal, Tamil Nadu</td>
+<td>Engineering and Technology</td>
+<td>+91 44 27990000</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Amaravati Campus</td>
+<td>Kuragallu, Andhra Pradesh</td>
+<td>Engineering and Computing</td>
+<td>+91 863 2345678</td>
+</tr>
+
+</table>
+
+<hr>
+
+<!-- Additional Information -->
+
+<h2 style="text-align:center; color:purple;">
+About the University
+</h2>
+
+<p style="text-align:center;">
+Amrita Vishwa Vidyapeetham is known for its strong research programs,
+innovation centers, and global academic collaborations. The university
+offers undergraduate, postgraduate, and doctoral programs in
+Engineering, Medicine, Business, Arts, and Sciences.
+</p>
+
+<hr>
+
+<!-- Footer -->
+
+<p style="text-align:center; color:gray;">
+Official Website: www.amrita.edu <br>
+© Amrita Vishwa Vidyapeetham
+</p>
+
+</body>
+</html>

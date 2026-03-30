@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Master Time Table - CSE II Sem C</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        font-size: 13px;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 6px;
+        text-align: center;
+        vertical-align: middle;
+        word-wrap: break-word;
+    }
+
+    th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+
+    .header-table td {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .yellow {
+        background-color: yellow;
+        font-weight: bold;
+    }
+
+    .red {
+        color: red;
+        font-weight: bold;
+    }
+
+    .library {
+        font-weight: bold;
+    }
+
+    .small {
+        font-size: 12px;
+    }
+
+    .course-table th {
+        background-color: #e6e6e6;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Master Time Table CSE II Semester C Section</h2>
+
+<!-- HEADER INFO -->
+<table class="header-table">
+    <tr>
+        <td>Dept: CSE</td>
+        <td>Class Room Venue: 512</td>
+    </tr>
+    <tr>
+        <td>Class: B.Tech CSE-C</td>
+        <td>Semester: II</td>
+    </tr>
+    <tr>
+        <td>
+            Class Advisor 1:<br>
+            Mr. Budati Jaya Lakshminarayana<br>
+            Email: bj_lakshminarayana@av.amrita.edu<br>
+            Mobile: +91-7989795768
+        </td>
+        <td>
+            Class Advisor 2:<br>
+            Dr. Arun Kumar S<br>
+            Email: s_arunkumar@av.amrita.edu<br>
+            Mobile: +91-8940857202
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<!-- TIMETABLE -->
+<table>
+    <tr>
+        <th>Day</th>
+        <th>Slot 1<br>08:55-09:45</th>
+        <th>Slot 2<br>09:45-10:35</th>
+        <th class="yellow">10:35-10:45</th>
+        <th>Slot 3<br>10:45-11:35</th>
+        <th>Slot 4<br>11:35-12:25</th>
+        <th>Slot 5<br>12:25-01:15</th>
+        <th class="yellow">01:15-02:05</th>
+        <th>Slot 6<br>02:10-03:00</th>
+        <th class="yellow">03:00-03:10</th>
+        <th>Slot 7<br>03:10-04:00</th>
+        <th>Slot 8<br>04:00-04:50</th>
+    </tr>
+
+    <!-- MONDAY -->
+    <tr>
+        <td>Monday</td>
+        <td colspan="2">23MAT116 Discrete Mathematics LAB</td>
+        <td class="yellow" rowspan="5">Short Break</td>
+        <td>23PHY115 Modern Physics</td>
+        <td>23CSE110 Object Oriented Programming</td>
+        <td class="library">LIBRARY</td>
+        <td class="yellow" rowspan="5">Lunch Break</td>
+        <td class="library">LIBRARY</td>
+        <td class="yellow" rowspan="5">Short Break</td>
+        <td colspan="2" class="library">Library / Sports</td>
+    </tr>
+
+    <!-- TUESDAY -->
+    <tr>
+        <td>Tuesday</td>
+        <td colspan="2">23CSE113 User Interface Design LAB (BYOD)</td>
+        <td>23MAT117 Linear Algebra</td>
+        <td>23MAT116 Discrete Mathematics</td>
+        <td class="red">COUNSELLING</td>
+        <td class="library">LIBRARY</td>
+        <td colspan="2">22ADM111 Glimpses of Glorious India</td>
+    </tr>
+
+    <!-- WEDNESDAY -->
+    <tr>
+        <td>Wednesday</td>
+        <td>23PHY115 Modern Physics</td>
+        <td>23CSE113 User Interface Design</td>
+        <td colspan="2">23MAT117 Linear Algebra LAB (BYOD)</td>
+        <td class="red">COUNSELLING</td>
+        <td class="library">LIBRARY</td>
+        <td colspan="2" class="library">Library / Sports</td>
+    </tr>
+
+    <!-- THURSDAY -->
+    <tr>
+        <td>Thursday</td>
+        <td>23CSE110 Object Oriented Programming</td>
+        <td>23MAT116 Discrete Mathematics</td>
+        <td colspan="2">23CSE110 Object Oriented Programming LAB</td>
+        <td>23MAT117 Linear Algebra</td>
+        <td>23MEE115 Manufacturing Practice LAB</td>
+        <td colspan="2">23MEE115 Manufacturing Practice LAB</td>
+    </tr>
+
+    <!-- FRIDAY -->
+    <tr>
+        <td>Friday</td>
+        <td>23CSE110 Object Oriented Programming</td>
+        <td>23MAT116 Discrete Mathematics</td>
+        <td>23PHY115 Modern Physics (T)</td>
+        <td>23CSE113 User Interface Design</td>
+        <td>23MAT117 Linear Algebra</td>
+        <td>22ADM111 Glimpses of Glorious India (P)</td>
+        <td colspan="2" class="library">Library / Sports</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- COURSE DETAILS -->
+<table class="course-table">
+    <tr>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>L-T-P</th>
+        <th>Credits</th>
+        <th>Faculty Name</th>
+        <th>Assisting Faculty</th>
+    </tr>
+
+    <tr>
+        <td>23MAT116</td>
+        <td>Discrete Mathematics</td>
+        <td>3-0-2</td>
+        <td>4</td>
+        <td>Dr. Srivasa Rao Thota</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>23MAT117</td>
+        <td>Linear Algebra</td>
+        <td>3-0-2</td>
+        <td>4</td>
+        <td>Mr. Sapavat Bixapathi</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>23CSE110</td>
+        <td>Object Oriented Programming</td>
+        <td>3-0-2</td>
+        <td>4</td>
+        <td>Dr. Satya Rajendra Singh R</td>
+        <td>Dr. Balaji TK</td>
+    </tr>
+
+    <tr>
+        <td>23PHY115</td>
+        <td>Modern Physics</td>
+        <td>2-1-0</td>
+        <td>3</td>
+        <td>Dr. Sounya</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>23CSE113</td>
+        <td>User Interface Design</td>
+        <td>2-0-2</td>
+        <td>3</td>
+        <td>Dr. Rajkumar Batchu</td>
+        <td>Mr. Barge Bharadwaj</td>
+    </tr>
+
+    <tr>
+        <td>23MEE115</td>
+        <td>Manufacturing Practice</td>
+        <td>0-0-3</td>
+        <td>1</td>
+        <td>Dr. Sathies S.</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>22ADM111</td>
+        <td>Glimpses of Glorious India</td>
+        <td>2-0-1</td>
+        <td>2</td>
+        <td>Dr. Siva Panuganti</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <th colspan="2">Total Hours</th>
+        <th>15-1-12</th>
+        <th>21</th>
+        <th colspan="2">Total: 28 Hours</th>
+    </tr>
+</table>
+<hr>
+
+<h2>Subject-wise Syllabus</h2>
+
+<h3>23MAT116 – Discrete Mathematics</h3>
+<img src="syllabus/Screenshot 2026-02-08 113743.png"
+     alt="Discrete Mathematics Syllabus"
+     width="800">
+
+<br><br>
+
+<h3>23MAT117 – Linear Algebra</h3>
+<img src="syllabus/Screenshot 2026-02-08 115107.png"
+     alt="Linear Algebra Syllabus"
+     width="800">
+
+<br><br>
+
+<h3>23CSE110 – Object Oriented Programming</h3>
+<img src="syllabus/Screenshot 2026-02-08 115153.png"
+     alt="OOP Syllabus"
+     width="800">
+
+<br><br>
+<h3>23PHY115 – Modern Physics</h3>
+<img src="syllabus/Screenshot 2026-02-08 115246.png"
+     alt="Modern Physics Syllabus"
+     width="800">   
+
+<br><br>   
+<h3>23CSE113 – User Interface Design</h3>
+<img src="syllabus/Screenshot 2026-02-08 115321.png"
+        alt="UI Design Syllabus"
+        width="800">        
+
+<br><br>
+<h3>23MEE115 – Manufacturing Practice</h3>
+<img src="syllabus/Screenshot 2026-02-08 115353.png"
+        alt="Manufacturing Practice Syllabus"
+        width="800">
+    
+<br><br>
+<h3>22ADM111 – Glimpses of Glorious India</h3>
+<img src="syllabus/Screenshot 2026-02-08 115445.png"
+        alt="Glimpses of Glorious India Syllabus"
+        width="800">
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Courses Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header */
+        .top {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 22px;
+        }
+
+        /* Main layout */
+        .main {
+            display: grid;
+            grid-template-columns: 180px auto;
+            margin: 10px;
+            gap: 10px;
+        }
+
+        /* Sidebar */
+        .left {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border: 1px solid #aaa;
+        }
+
+        .left h3 {
+            margin-top: 0;
+        }
+
+        /* Content */
+        .right {
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #aaa;
+        }
+
+        /* Grid for courses */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .box {
+            border: 1px solid #888;
+            padding: 10px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .box img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .box p {
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 6px 10px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        /* Footer */
+        .bottom {
+            text-align: center;
+            background-color: #444;
+            color: white;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        /* Simple responsiveness */
+        @media (max-width: 600px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        MY COURSES
+    </div>
+
+    <div class="main">
+
+        <!-- Sidebar -->
+        <div class="left">
+            <h3>Categories</h3>
+            <p>Programming</p>
+            <p>Science</p>
+            <p>Maths</p>
+            <p>Languages</p>
+        </div>
+
+        <!-- Content -->
+        <div class="right">
+
+            <div class="course-grid">
+
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLrq4s4xwmnVwnLBDcBPH7CZY4SSto1DoDA&s">
+                    <p>HTML Basics</p>
+                    <button>Enroll</button>
+                </div>
+
+                <div class="box">
+                    <img src="https://wallpapers.com/images/hd/funny-random-pictures-704-x-946-n10lbeshjswre4cj.jpg">
+                    <p>Physics Intro</p>
+                    <button>Enroll</button>
+                </div>
+
+                <div class="box">
+                    <img src="https://pleated-jeans.com/wp-content/uploads/2025/04/funny-random-pictures-4-6-25-16.jpg">
+                    <p>Algebra Course</p>
+                    <button>Enroll</button>
+                </div>
+
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Sh_79KXtNm6WEXmv53vl5VN5sTkAPw_44g&s">
+                    <p>English Speaking</p>
+                    <button>Enroll</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        © Simple Student Project
+    </div>
+
+</body>
+</html>

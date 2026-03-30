@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce App</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 22px;
+        }
+
+        /* Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #ddd;
+            padding: 10px;
+            border: 1px solid #999;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar button {
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background-color: #222;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            border: 1px solid #999;
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .item img {
+            width: 100px;
+            height: 100px;
+        }
+
+        button.buy {
+            margin-top: 8px;
+            padding: 6px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">E-Commerce Store</div>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Categories</h3>
+
+            <button onclick="showCategory('all')">All</button>
+            <button onclick="showCategory('electronics')">Electronics</button>
+            <button onclick="showCategory('clothing')">Clothing</button>
+            <button onclick="showCategory('home')">Home Appliances</button>
+            <button onclick="showCategory('books')">Books</button>
+        </div>
+
+        <!-- Products -->
+        <div class="products" id="productList">
+
+            <!-- Electronics -->
+            <div class="item electronics">
+                <img src="https://jokesoftheday.net/jokes-archive/2012/09/19/joke-funny-photo-my-apple-laptop.jpg">
+                <p>Laptop</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <div class="item electronics">
+                <img src="https://www.shutterstock.com/image-photo/funny-head-yellow-pumpkin-big-260nw-695902240.jpg">
+                <p>Headphones</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <!-- Clothing -->
+            <div class="item clothing">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFG6pu_dxOzCiavUzr2ys9FbhclmyDuryNQ&s">
+                <p>T-Shirt</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <div class="item clothing">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrf-zElCIPqeQc6xglg6mZt6lQkWWvAFjQsA&s">
+                <p>Jeans</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <!-- Home Appliances -->
+            <div class="item home">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIckdbDwIGDwmg-gRWThK9SuErYV31j3OocA&s">
+                <p>Microwave</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <div class="item home">
+                <img src="https://www.shutterstock.com/image-vector/cheerful-cartoon-refrigerator-character-light-260nw-2694902725.jpg">
+                <p>Fridge</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <!-- Books -->
+            <div class="item books">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/book-hyperbole-1519060268.png">
+                <p>Novel</p>
+                <button class="buy">Buy</button>
+            </div>
+
+            <div class="item books">
+                <img src="https://i.ytimg.com/vi/WkvKOBOgBY0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDnItSYbe-zQzA4r3LXaRRd_IGUrA">
+                <p>Study Book</p>
+                <button class="buy">Buy</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 Simple E-Commerce</div>
+
+    <script>
+        function showCategory(category) {
+            let items = document.getElementsByClassName("item");
+
+            for (let i = 0; i < items.length; i++) {
+                if (category === "all") {
+                    items[i].style.display = "block";
+                } else {
+                    if (items[i].classList.contains(category)) {
+                        items[i].style.display = "block";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
