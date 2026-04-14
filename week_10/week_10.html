@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week 9</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h2 {
+    color: #333;
+}
+
+input {
+    padding: 8px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#output {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e6f2ff;
+    border-radius: 5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Week 9 Programs</h2>
+
+<input type="number" id="num" placeholder="Enter a number"><br>
+
+<button onclick="sumDigits()">Sum of Digits</button>
+<button onclick="sign()">Sign</button>
+<button onclick="sortNum()">Sort</button>
+<button onclick="largest()">Largest</button>
+<button onclick="evenodd()">Even/Odd</button>
+<button onclick="fizz()">LOL-OK</button>
+<button onclick="grade()">Grade</button>
+
+<div id="output">Output will appear here</div>
+
+</div>
+
+<script>
+
+// Sum of digits
+function sumDigits() {
+    var n = document.getElementById("num").value;
+    var sum = 0;
+
+    while(n > 0) {
+        var r = n % 10;
+        sum += r;
+        n = parseInt(n / 10);
+    }
+
+    document.getElementById("output").innerHTML = "Sum = " + sum;
+}
+
+// Sign
+function sign() {
+    var a=3,b=-7,c=2;
+    var p = a*b*c;
+
+    if(p>0)
+        alert("The sign is +");
+    else
+        alert("The sign is -");
+}
+
+// Sort
+function sortNum() {
+    var arr = [0,-1,4];
+    arr.sort(function(a,b){ return b-a; });
+
+    alert("Sorted: " + arr);
+}
+
+// Largest
+function largest() {
+    var a=-5,b=-2,c=6,d=0,e=-1;
+    var max=a;
+
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    if(e>max) max=e;
+
+    alert("Largest = " + max);
+}
+
+// Even/Odd
+function evenodd() {
+    var text="";
+
+    for(var i=0;i<=15;i++) {
+        if(i%2==0)
+            text += i + " is even<br>";
+        else
+            text += i + " is odd<br>";
+    }
+
+    document.getElementById("output").innerHTML = text;
+}
+
+// LOL-OK
+function fizz() {
+    var text="";
+
+    for(var i=1;i<=100;i++) {
+        if(i%3==0 && i%5==0)
+            text += "LOL-OK<br>";
+        else if(i%3==0)
+            text += "LOL<br>";
+        else if(i%5==0)
+            text += "OK<br>";
+        else
+            text += i + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = text;
+}
+
+// Grade
+function grade() {
+    var avg = (60+70+80+90+75+85)/6;
+    var g;
+
+    if(avg<60) g="F";
+    else if(avg<70) g="D";
+    else if(avg<80) g="C";
+    else if(avg<90) g="B";
+    else g="A";
+
+    document.getElementById("output").innerHTML =
+    "Average = "+avg+"<br>Grade = "+g;
+}
+
+</script>
+
+</body>
+</html>

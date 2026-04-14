@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Programs</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Number Programs</h2>
+
+    Enter Number:
+    <input type="number" id="num"><br><br>
+
+    <button onclick="even()">Even</button>
+    <button onclick="odd()">Odd</button>
+    <button onclick="prime()">Prime</button>
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="armstrong()">Armstrong</button>
+
+    <div id="output"></div>
+
+<script>
+
+function getValue() {
+    return document.getElementById("num").value;
+}
+
+function even() {
+    var n = getValue();
+
+    if (n % 2 == 0)
+        document.getElementById("output").innerHTML = "Even Number";
+    else
+        document.getElementById("output").innerHTML = "Not Even";
+}
+
+function odd() {
+    var n = getValue();
+
+    if (n % 2 != 0)
+        document.getElementById("output").innerHTML = "Odd Number";
+    else
+        document.getElementById("output").innerHTML = "Not Odd";
+}
+
+function prime() {
+    var n = getValue();
+    var i, flag = 0;
+
+    if (n <= 1) {
+        document.getElementById("output").innerHTML = "Not Prime";
+        return;
+    }
+
+    for (i = 2; i < n; i++) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+        document.getElementById("output").innerHTML = "Prime Number";
+    else
+        document.getElementById("output").innerHTML = "Not Prime";
+}
+
+function factorial() {
+    var n = getValue();
+    var i, fact = 1;
+
+    for (i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+
+    document.getElementById("output").innerHTML =
+        "Factorial = " + fact;
+}
+
+function armstrong() {
+    var n = getValue();
+    var temp = n;
+    var sum = 0;
+    var r;
+
+    while (temp > 0) {
+        r = temp % 10;
+        sum = sum + (r * r * r);
+        temp = parseInt(temp / 10);
+    }
+
+    if (sum == n)
+        document.getElementById("output").innerHTML = "Armstrong Number";
+    else
+        document.getElementById("output").innerHTML = "Not Armstrong";
+}
+
+</script>
+
+</body>
+</html>
