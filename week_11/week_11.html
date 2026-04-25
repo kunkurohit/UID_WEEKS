@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            width: 320px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        p {
+            margin: 3px 0;
+            font-size: 13px;
+        }
+
+        .error { color: red; }
+        .success { color: green; }
+
+        button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h3>Registration Form</h3>
+
+    <!-- Name -->
+    <input type="text" id="name" placeholder="Enter Name">
+    <p id="nameMsg" class="error"></p>
+
+    <!-- Username -->
+    <input type="text" id="username" placeholder="Enter Username">
+    <p id="userMsg" class="error"></p>
+
+    <!-- Email -->
+    <input type="text" id="email" placeholder="Enter Email">
+    <p id="emailMsg" class="error"></p>
+
+    <!-- Password -->
+    <input type="password" id="password" placeholder="Enter Password">
+    <p id="passMsg"></p>
+
+    <!-- Mobile -->
+    <input type="text" id="mobile" placeholder="Enter Mobile Number">
+    <p id="mobileMsg" class="error"></p>
+
+    <button onclick="checkForm()">Submit</button>
+</div>
+
+<script>
+
+    // A: Username check while typing
+    document.getElementById("username").onkeyup = function () {
+        let u = this.value;
+
+        if (u.length < 5) {
+            document.getElementById("userMsg").innerText =
+                "Username must be at least 5 characters";
+        } else {
+            document.getElementById("userMsg").innerText = "";
+        }
+    };
+
+    // B: Email check function
+    function isEmailValid(email) {
+        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        return pattern.test(email);
+    }
+
+    // C: Password strength
+    document.getElementById("password").onkeyup = function () {
+        let p = this.value;
+        let msg = document.getElementById("passMsg");
+
+        if (p.length < 6) {
+            msg.innerText = "Weak password";
+            msg.className = "error";
+        } else {
+            msg.innerText = "Strong password";
+            msg.className = "success";
+        }
+    };
+
+    // D: Mobile check when leaving field
+    document.getElementById("mobile").onblur = function () {
+        let m = this.value;
+
+        if (!/^\d{10}$/.test(m)) {
+            document.getElementById("mobileMsg").innerText =
+                "Enter exactly 10 digits";
+        } else {
+            document.getElementById("mobileMsg").innerText = "";
+        }
+    };
+
+    // E: Final form validation
+    function checkForm() {
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+
+        let valid = true;
+
+        // Name check
+        if (name == "") {
+            document.getElementById("nameMsg").innerText =
+                "Name cannot be empty";
+            valid = false;
+        } else {
+            document.getElementById("nameMsg").innerText = "";
+        }
+
+        // Email check
+        if (!isEmailValid(email)) {
+            document.getElementById("emailMsg").innerText =
+                "Invalid email format";
+            valid = false;
+        } else {
+            document.getElementById("emailMsg").innerText = "";
+        }
+
+        // Password check
+        if (pass.length < 6) {
+            document.getElementById("passMsg").innerText =
+                "Minimum 6 characters required";
+            valid = false;
+        }
+
+        // Final result
+        if (valid) {
+            alert("Form submitted successfully!");
+        }
+    }
+
+</script>
+
+</body>
+</html>
